@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="app_bar_height">200dp</dimen>
+    <dimen name="item_width">200dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="small_margin">8dp</dimen>
+    <dimen name="small_elevation">2dp</dimen>
+    <dimen name="none">0dp</dimen>
+    <dimen name="flag_width_max">320dp</dimen>
+    <dimen name="flag_height_max">240dp</dimen>
+    <dimen name="flag_width">120dp</dimen>
+    <dimen name="flag_height">80dp</dimen>
+</resources>

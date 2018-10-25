@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="com.paringer.medisafe.model.rest.data.CountryItem"/>
+
+        <variable
+            name="data"
+            type="com.paringer.medisafe.model.rest.data.CountryItem"/>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/small_margin"
+        android:elevation="@dimen/small_elevation"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <com.caverock.androidsvg.SVGImageView
+                    android:id="@+id/id_flag"
+                    android:layout_width="@dimen/flag_width"
+                    android:layout_height="@dimen/flag_height"
+                    android:layout_margin="@dimen/small_margin"
+                    android:contentDescription="@string/flag"
+                    android:scaleType="centerInside"
+                    android:src="@android:drawable/ic_dialog_dialer"
+                    android:uri="@{data.flag}"
+                    />
+
+                <TextView
+                    android:id="@+id/nativeNameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxWidth="@dimen/flag_width"
+                    android:layout_marginStart="@dimen/small_margin"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    android:hint="@string/etc"
+                    android:text="@{data.nativeName}"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/small_margin"
+                android:layout_marginBottom="@dimen/small_margin"
+                >
+
+                <TextView
+                    android:id="@+id/nameText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/none"
+                    android:layout_marginTop="@dimen/small_margin"
+                    android:hint="@string/etc"
+                    android:text="@{data.name}"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    />
+
+                <TextView
+                    android:id="@+id/capital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/none"
+                    android:hint="@string/etc"
+                    android:text="@{data.capital}"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    />
+
+                <TextView
+                    android:id="@+id/population"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/none"
+                    android:layout_marginBottom="@dimen/small_margin"
+                    android:hint="@string/etc"
+                    android:text="@{``+data.population}"
+                    android:textAppearance="?attr/textAppearanceListItem"
+                    />
+
+            </LinearLayout>
+    </LinearLayout>
+</layout>
