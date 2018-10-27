@@ -30,6 +30,23 @@
         <include layout="@layout/country_list"/>
     </FrameLayout>
 
+    <EditText
+        android:id="@+id/searchText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/Base.TextAppearance.AppCompat.Small"
+        style="?android:attr/textAppearanceSmall"
+        android:inputType="textFilter"
+        android:imeActionId="3"
+        android:imeOptions="actionSearch"
+        android:text=""
+        android:hint="@string/search"
+        android:layout_gravity="start|bottom"
+        android:background="@drawable/rounded"
+        android:padding="@dimen/small_margin"
+        android:lines="1"
+        />
+
     <android.support.design.widget.FloatingActionButton
         android:id="@+id/fab"
         android:layout_width="wrap_content"
